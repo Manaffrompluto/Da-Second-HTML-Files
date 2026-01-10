@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-item-1 { grid-area: header; }
+.grid-item-2 { grid-area: menu; }
+.grid-item-3 { grid-area: main; }
+.grid-item-4 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-areas:
+     'header header header header header'
+     'menu main main main main'
+     'menu footer footer footer footer';
+    background-color: chartreuse;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.grid-container div {
+    background-color: #7fff00;
+    text-align:center;
+    font-family:'Courier New', Courier, monospace;
+    padding: 20px;
+    border: 3px solid black;
+}
+</style>
+</head>
+<body>
+
+
+<div class="grid-container">
+    <div class="grid-item-1">Hello guys.</div>
+    <div class="grid-item-2">This is a testing project I made.</div>
+    <div class="grid-item-3">It is about CSS grid layout.</div>
+    <div class="grid-item-4">Lol.</div>
+</div>
+
+</body>
+</html>
