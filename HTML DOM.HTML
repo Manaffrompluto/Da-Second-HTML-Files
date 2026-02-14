@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML DOM</title>
+        <style>
+            .alert{
+                color: cornflowerblue;
+                background-color: darkblue;
+                padding: 5px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading" style="font-family: 'Courier New', Courier, monospace;color:deepskyblue;">Hello guy.</h1>
+        <p style="font-family: 'Courier New', Courier, monospace;color:dodgerblue;">Today, let's learn about HTML DOM (Document Object Model).</p>
+        <p style="font-family: 'Courier New', Courier, monospace;color:dodgerblue;">I hope it's fun to you.</p>
+        
+        <script>
+            let div = document.createElement('div');
+            div.id = "paragraph";
+            div.className = "alert";
+            div.innerHTML = <p>For example,here's one.</p>
+            document.body.append(div);
+            
+            
+
+
+
