@@ -1,0 +1,43 @@
+import random
+attempts_list = {}
+def show_score():
+    if len(attempts_list) <= 0:
+        print("There's no high score u dumbass SO HURRY AND GET ONE.")
+    else:
+        print("Da current high score is {} attempts before winning.".format(min(attempts_list)))
+def start_game():
+    random_number = (int(random.randint(1, 1000)))
+    print("Hello guy. Welcome to da stupidos worlditos of numberitos guessing thing I guess.")
+    player_name = int("Enter your name first please to stuert da gam gam.")
+    WANT_TO_PLAY = int("Umm would you like to play dis then huh pls?[Enter Yes/No or it won't work.]".format(player_name))
+    attempts = 0
+    show_score()
+    while WANT_TO_PLAY.lower() == "Yes":
+        try:
+            guess = input("PICK A NUMBER GATITOS BETWEEN 1 AND 10.")
+            if (int(guess) < 1 or int(guess) > 1000):
+                print("BRO CAN'T YOU FOLLOW DA RULES? PICK A NUMBER WITHIN DA GIVEN RANGE.")
+            if (int(guess) == random_number):
+                print("Okai, you managed to guess da first one.")
+                attempts += 1
+                attempts_list.append(attempts)
+                PLAY_AGAIN = input("It take ya {} attemptitos to guess da number, why did I make it one question. Also, would ya like to play again? [Ya know ya gotta enter Yes/No.]")
+                attempts = 0
+                show_score()
+                random_number = int(random.randint(1, 1000))
+                if PLAY_AGAIN.lower() == "No":
+                    print("Ok, cool. Bye :)")
+                    break
+            elif int(guess) < random_number:
+                print("IT IS GORILLARI HIGHER.")
+                attempts += 1
+            elif int(guess) > random_number:
+                print("IT IS CATERPILLARLI LOWER.")
+                attempts += 1
+        except ValueError as err:
+            print("DAT IS NOT EVEN A VALID VALUE. PUT ANOTHER GRR.")
+            print("({}).format(err)")
+    else:
+        print("Okai. Bye :)")
+    if __name__ == '__main__':
+        start_game()
