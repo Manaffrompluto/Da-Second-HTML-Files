@@ -1,0 +1,12 @@
+empty_list = []
+print()
+
+num = [1, 2 ,3 ,4 ,5]
+print(num)
+
+trip = [1, 2, 3] * 3
+print(trip)
+
+list = [100, 200, 300, 400, 500]
+list = list[::-1]
+print(list, "\n")
