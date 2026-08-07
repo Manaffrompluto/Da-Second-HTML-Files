@@ -5,6 +5,7 @@ play = True
 attempt = 1
 
 while play:
+    print(f"Attempt {attempt}")
     guess = input("What iz da best selling console of all time?: ")
     if guess == 'PS2' or guess == 'ps2':
         print("Correct! Next question.")
